@@ -1,0 +1,201 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+a{
+	color: initial;
+}
+a:hover{
+	text-decoration: none;
+	color: initial;
+}
+.container-fluid{
+	padding: 0px;
+}
+
+.d-navbar{
+	background-color: #333;
+}
+.d-navbar ul{
+	padding-left: 0px;
+	display: block;
+	margin: 0px;
+}
+.d-navbar ul li{
+	text-decoration: none;
+	display: inline-block;
+	line-height: 60px;
+	margin: 0px 20px;
+	color: #fff;
+}
+
+.d-navbar-logo{
+	line-height: 60px;
+	margin: 0px 15px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+#d-banner{
+	margin: 15px 0px 30px;
+	border-radius: 10px;
+}
+.d-border{
+	border-radius: 10px;
+	border: 2px solid lightgray;
+	padding: 15px;
+	position: relative;
+}
+.khuyenmai::before{
+	content: 'SIÊU KHUYẾN MÃI';
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #fff;
+	position: absolute;
+	top: -15px;
+}
+.noibat::before{
+	content: 'ĐIỆN THOẠI NỔI BẬT';
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #fff;
+	position: absolute;
+	top: -15px;
+}
+.d-h5{
+	padding-left: 15px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.d-card{
+	text-align: center;
+	padding: 10px 5px;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+.d-card:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transition: 0.3s;
+}
+.d-card-img{
+	margin-bottom: 16px;
+}
+.d-card-title{
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.d-card-price{
+	color: red;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.d-more{
+	margin-bottom: 0px;
+	text-align: center;
+}
+.d-detail{
+	margin: 30px 0px;
+	display: block;
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+.footer{
+	padding: 60px 0px 30px 0px;
+	background-color: #333;
+}
+.footer-logo{
+	width: 100%;
+}
+.footer-logo-img{
+	width: 150px;
+	display: block;
+	margin: 0px auto 15px;
+}
+.footer-logo-subtitle{
+	color: #fff;
+	font-size: 15px;
+	margin-bottom: 0px;
+	text-align: justify;
+}
+.footer-links h4,.footer-contact h4{
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #c7141a;
+}
+
+.footer-links ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.footer-links ul li{
+	padding: 10px 0;
+}
+.footer-links ul li:first-child{
+	padding-top: 0px;
+}
+.footer-links ul li i{
+	color: #c7141a;
+}
+.footer-links ul li a{
+	color: #eee;
+}
+.footer-links ul li a:hover{
+	color: #c7141a;
+}
+.footer-contact p, .contact p{
+	line-height: 26px;
+	margin-bottom: 30px;
+	color: #eee;
+}
+.contact{
+	color: dimgray;
+}
+.social-links a{
+	font-size: 18px;
+	display: inline-block;
+	background: #7C7C7C;
+	color: #eee;
+	line-height: 1;
+	padding: 8px 0;
+	margin-right: 4px;
+	border-radius: 50%;
+	text-align: center;
+	width: 36px;
+	height: 36px;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+.social-links a:hover{
+	background-color: #c7141a;
+	transition: 0.3s;
+}
+.license{
+	background-color: #000;
+	padding: 4px 0px;
+}
+.license p{
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 0px;
+}
+.license a{
+	color: #c7141a;
+}

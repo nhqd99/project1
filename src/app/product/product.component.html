@@ -1,0 +1,21 @@
+
+
+<div class="row" style="margin-bottom: 30px;">
+	<div class="col-12" style="margin: 30px 0px;">
+		<h4>Tất cả sản phẩm</h4>
+	</div>
+	<div class="col-3 d-card"
+	*ngFor="let data of posts"
+	>
+		<a href="/product/{{ data.id }}">
+			<div class="d-card-img">
+				<img src="{{ data.imageFile }}" width="150px">
+			</div>
+			<p class="d-card-title">{{ data.productName }}</p>
+			<p class="d-card-price">${{ data.unitPrice }}</p>
+		</a>
+	</div>
+
+</div>
+
+

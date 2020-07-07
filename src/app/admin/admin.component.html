@@ -1,0 +1,62 @@
+<div class="row" style="margin: 30px 0px;">
+    <div class="col-6 offset-3">
+        <h5>Add Product</h5>
+        <form id="myForm" method="POST" action="https://truonghuynhit-mobilestore.herokuapp.com/api/v1/product/add">
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" class="form-control" name="productName">
+            </div>
+            <div class="form-group">
+              <label>Unit Price</label>
+              <input type="text" class="form-control" name="unitPrice">
+            </div>
+            <div class="form-group">
+                <label>Units In Stock</label>
+                <input type="text" class="form-control" name="unitInStock">
+              </div>
+              
+              <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" name="description">
+              </div>
+              <div class="form-group">
+                <label>Manufacturer</label>
+                <input type="text" class="form-control" name="manufacturer">
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <input type="text" class="form-control" name="category">
+              </div>
+              
+              <label>Condition</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="condition" id="condition1" value="0">
+                <label class="form-check-label" for="condition1">
+                  New
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="condition" id="condition2" value="1">
+                <label class="form-check-label" for="condition2">
+                  Old
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="condition" id="condition3" value="2">
+                <label class="form-check-label" for="condition3">
+                  Refurbished
+                </label>
+              </div>
+
+                <label for="uploadFile">Ảnh</label>
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" name="imageFile" class="custom-file-input" id="uploadFile" multiple>
+                        <label class="custom-file-label" for="uploadFile" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                </div>
+
+            <button id="btnSubmit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>
