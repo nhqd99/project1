@@ -13,6 +13,8 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Chưa đăng sản phẩm được
+
   // submitForm() {
   //   var formData: any = new FormData();
   //   formData.append("productName", this.form.get('productName').value);

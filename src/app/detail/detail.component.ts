@@ -22,6 +22,8 @@ export class DetailComponent implements OnInit {
         });
 
   }
+
+  // Add giỏ hàng chưa lưu được
   addToCart(product) {
     this.cartService.addToCart(product);
     console.log(this.cartService.getItems());
