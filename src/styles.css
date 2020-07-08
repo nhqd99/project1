@@ -2,11 +2,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
-a{
+a, .d-navbar-a{
 	color: initial;
 }
-a:hover{
-	text-decoration: none;
+a:hover, .d-navbar-a:hover{
+	text-decoration: none !important;
 	color: initial;
 }
 .container-fluid{
@@ -15,6 +15,7 @@ a:hover{
 
 .d-navbar{
 	background-color: #333;
+	position: relative;
 }
 .d-navbar ul{
 	padding-left: 0px;
@@ -30,13 +31,15 @@ a:hover{
 }
 
 .d-navbar-logo{
-	line-height: 60px;
-	margin: 0px 15px;
 	color: #fff;
 	text-align: center;
 	font-weight: bold;
 }
-
+.d-navbar-subtitle{
+	font-size: 1.6em;
+	color: #fff !important;
+	text-align: center;
+}
 #d-banner{
 	margin: 15px 0px 30px;
 	border-radius: 10px;

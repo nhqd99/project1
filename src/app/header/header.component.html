@@ -1,45 +1,61 @@
-<div
-  class="container-fluid"
-  style="
-    height: 25vh;
-
-    background-color: rgb(238, 238, 238);
-  "
->
-  <div class="container">
-    <div class="row">
+<!-- <div class="container-fluid" style="height:25vh;background-color: rgb(238,238,238);"> -->
+<div class="container-fluid" style="padding: 0px;">
+  <div class="d-navbar">
+    <div class="row" style="margin: 0px;">
       <div class="col">
-        <h1 style="font-size: 5rem; padding-top: 50px;">
-          {{ title }}
-        </h1>
-        <span class="lead"> Group: A1 </span>
+        <a href="/" class="d-navbar-a">
+          <h1 class="d-navbar-logo">{{ title }}</h1>
+          <h5 class="d-navbar-subtitle">{{ subtitle }}</h5>
+        </a>
+        
+      </div>
+      <div class="col">
+        <ul>
+          <li>Apple</li>
+          <li>Samsung</li>
+          <li>LG</li>
+          <li>Xiaomi</li>
+          <li>Oppo</li>
+        </ul>
       </div>
       <div class="col text-right">
-        <button
-          *ngIf="button === 'logout'"
+        <button 
+          *ngIf="isAdmin()"
+          type="button"
+          style="margin-top: 30px;"
+          class="btn btn-primary"
+          routerLink="/admin"
+          >
+          Add product
+        </button>
+        <button 
+          *ngIf="showLogout()"
           type="button"
           style="margin-top: 30px;"
           class="btn btn-danger"
-          (click)="onLogout()"
-        >
-          logout
+          (click)='onLogout()'
+          >
+          Logout
+        </button>
+        <button 
+          *ngIf="!showLogout()"
+          type="button"
+          style="margin-top: 30px;"
+          class="btn btn-primary"
+          routerLink="/login"
+          >
+          Login
         </button>
         <button
-          *ngIf="button === 'view-cart'"
           type="button"
           style="margin-top: 30px;"
           class="btn btn-light"
           routerLink="/cart"
-        >
-          <i
-            class="fas fa-shopping-cart"
-            style="transform: rotateY(180deg) !important;"
-          ></i>
-          view cart
+          >
+            <i class="fas fa-shopping-cart" style="transform: rotateY(180deg) !important;"></i>
+            View Cart
         </button>
       </div>
     </div>
   </div>
-</div>
-
-<br />
+</div> 

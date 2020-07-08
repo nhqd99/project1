@@ -1,26 +1,36 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../login/authentication.service';
+import { AuthenticationService } from '../login/authentication.service'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   @Input() title = '';
   @Input() subtitle = '';
-  @Input() button = '';
+  // @Input() button = '';
 
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  public showLogout = () => {
+    return this.authenticationService.currentUserValue != null;
+  }
+
+  public isAdmin = () => {
+    return this.showLogout() && this.authenticationService.currentUserValue.role.toLowerCase() == 'admin';
+  }
+
   public onLogout = () => {
     this.authenticationService.logout();
     this.router.navigateByUrl('/login');
-  };
+  }
 }

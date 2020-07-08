@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project1": {
+    "MobileStore": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project1",
+            "outputPath": "dist/MobileStore",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "project1:build"
+            "browserTarget": "MobileStore:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "project1:build:production"
+              "browserTarget": "MobileStore:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project1:build"
+            "browserTarget": "MobileStore:build"
           }
         },
         "test": {
@@ -88,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -110,19 +119,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "project1:serve"
+            "devServerTarget": "MobileStore:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "project1:serve:production"
+              "devServerTarget": "MobileStore:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "project1",
+  "defaultProject": "MobileStore",
   "cli": {
-    "analytics": "8970291a-5684-467b-a666-bc662bc9f458"
+    "analytics": "628c7658-4b47-491f-8bde-e81ee6624c89"
   }
 }

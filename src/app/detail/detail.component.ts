@@ -5,7 +5,7 @@ import { CartService } from '../cart/cart.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
   posts;
@@ -14,11 +14,8 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
       let id = this.route.snapshot.params.id;
       this.service.getPosts(id)
-
         .subscribe(response => {
-
           this.posts = response;
-          
         });
 
   }
